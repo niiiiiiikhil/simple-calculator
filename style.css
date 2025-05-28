@@ -58,7 +58,7 @@ body {
 
 button {
     width: 100%;
-    height: 60px;
+    height: 60px; /* ensure minimum tap size */
     font-size: 1.2em;
     border: none;
     border-radius: 10px;
@@ -98,7 +98,7 @@ button:hover {
 
 @media (max-width: 400px) {
     button {
-        height: 50px;
+        height: 60px; /* keep at least 48px even on mobile */
         font-size: 1em;
     }
 
