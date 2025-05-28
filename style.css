@@ -3,7 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     background: linear-gradient(135deg, #74ebd5, #ACB6E5);
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
     transition: background-color 0.3s;
@@ -23,7 +23,8 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 320px;
+    width: 90%;
+    max-width: 350px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -51,15 +52,14 @@ body {
 
 .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 60px);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    justify-content: center;
 }
 
 button {
-    width: 60px;
+    width: 100%;
     height: 60px;
-    font-size: 1.1em;
+    font-size: 1.2em;
     border: none;
     border-radius: 10px;
     background-color: #eee;
@@ -94,4 +94,15 @@ button:hover {
 
 .dark-mode #history {
     background: #555;
+}
+
+@media (max-width: 400px) {
+    button {
+        height: 50px;
+        font-size: 1em;
+    }
+
+    #display {
+        font-size: 1.4em;
+    }
 }
