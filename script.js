@@ -1,6 +1,5 @@
 function appendValue(value) {
-    const display = document.getElementById('display');
-    display.value += value;
+    document.getElementById('display').value += value;
 }
 
 function clearDisplay() {
@@ -57,7 +56,7 @@ document.getElementById('themeSwitch').addEventListener('change', function() {
     document.body.classList.toggle('dark-mode');
 });
 
-// Keyboard support — only calculate + add to history on Enter
+// Keyboard support
 document.addEventListener('keydown', function(event) {
     const key = event.key;
     const allowedKeys = ['0','1','2','3','4','5','6','7','8','9','+','-','*','/','.','%'];
